@@ -25,8 +25,8 @@ $(document).ready(function() {
       }
       if (response) {
         // document.getElementById("doctors").innerHTML = "Working. technically"
-        for(let i=0; i < response.meta.count.length; i++) {
-          // $('#doctors').append(`Dr. ${city} is ${response.main.humidity}%`);
+        for(let i=0; i < response.data.length; i++) {
+          $('#doctors').append(`${response.data[i].profile.first_name} ${response.data[i].profile.last_name}, ${response.data[i].profile.title}<br>`);
         }
       } else {
         document.getElementById("doctors").innerHTML = "Something went wrong with this request."
