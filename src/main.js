@@ -10,7 +10,7 @@ $(document).ready(function() {
     event.preventDefault();
     const name = $('#name').val();
     const symptom = $('#symptom').val();
-    $("#doctors").empty();
+
 
     (async () => {
       let newList = new DoctorService();
@@ -20,7 +20,8 @@ $(document).ready(function() {
     })();
 
     function getElements(response) {
-
+      $("#doctors").empty("p");
+      $("#doctors").show();
       if (response) {
         if (response.data.length == 0) {
           document.getElementById("doctors").innerHTML = "There are no results for this search."
@@ -46,7 +47,7 @@ $(document).ready(function() {
               }
             }
           }
-          $('#doctors').append(`<hr>`);
+          $('#doctors').append(`<hr></hr>`);
         }
       } else {
         document.getElementById("doctors").innerHTML = "Something went wrong with this request.";

@@ -18,20 +18,21 @@ img {
 }
 
 #doctors {
-  display: block;
+  display: none;
   margin: auto;
   text-align: left;
   background-color: rgb(255, 255, 255);
   max-width: 600px;
   margin-bottom: 5%;
+  padding: 3%;
 }
 
 hr {
-  border: 15px solid rgb(218, 104, 76);
-  border-radius: 5px;
+  width: 80%;
+  border-top: 15px dotted rgb(218, 104, 76);
 }
 
 hr:nth-of-type(odd) {
-  border: 15px solid rgb(122, 195, 201);
-  border-radius: 5px;
+  width: 80%;
+  border-top: 15px dotted rgb(122, 195, 201);
 }
