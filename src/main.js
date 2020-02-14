@@ -26,7 +26,7 @@ $(document).ready(function() {
           document.getElementById("doctors").innerHTML = "There are no results for this search."
         }
         for(let i=0; i < response.data.length; i++) {
-          $('#doctors').append(`<strong>${response.data[i].profile.first_name} ${response.data[i].profile.last_name}, ${response.data[i].profile.title}</strong><br>`);
+          $('#doctors').append(`<br><strong>${response.data[i].profile.first_name} ${response.data[i].profile.last_name}, ${response.data[i].profile.title}</strong><br>`);
             if (response.data[i].specialties[0] != undefined) {
               $('#doctors').append(`<em>${response.data[i].specialties[0].actor}</em><br><br>`);
             }
@@ -46,7 +46,7 @@ $(document).ready(function() {
               }
             }
           }
-
+          $('#doctors').append(`<hr>`);
         }
       } else {
         document.getElementById("doctors").innerHTML = "Something went wrong with this request.";
