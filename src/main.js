@@ -25,11 +25,18 @@ $(document).ready(function() {
       }
       if (response) {
         for(let i=0; i < response.data.length; i++) {
-          $('#doctors').append(`${response.data[i].profile.first_name} ${response.data[i].profile.last_name}, ${response.data[i].profile.title}<br>`);
+          $('#doctors').append(`<strong>${response.data[i].profile.first_name} ${response.data[i].profile.last_name}, ${response.data[i].profile.title}</strong><br><br>`);
           
           for(let j=0; j < response.data[i].practices.length; j++) {
             if (response.data[i].practices[j].within_search_area === true) {
-              $('#doctors').append(`Address: <em>${response.data[i].practices[j].visit_address.street}, ${response.data[i].practices[j].visit_address.city}, ${response.data[i].practices[j].visit_address.state}, ${response.data[i].practices[j].visit_address.zip}</em><br>`);
+              $('#doctors').append(`${response.data[i].practices[j].name}<br>Address: <em>${response.data[i].practices[j].visit_address.street}, ${response.data[i].practices[j].visit_address.city}, ${response.data[i].practices[j].visit_address.state}, ${response.data[i].practices[j].visit_address.zip}</em><br>`);
+              
+              for(let k=0; k < response.data[i].practices[j].phones.length; k++) {
+                if (response.data[i].practices[j].phones[k].type == "landline") {
+                  $('#doctors').append(`Phone: ${response.data[i].practices[j].phones[k].number}<br><br>`);
+                }
+
+              }
             }
           }
         }
