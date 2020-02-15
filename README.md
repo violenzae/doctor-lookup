@@ -13,7 +13,8 @@ _This is an HTML page that contains a jQuery powered form that returns Portland 
 
 * _Clone or download from Github Repository._
 *  _Sign up with and receive an API Key from http://betterdoctor.com_
-* _Create a .env file in the root directory, and add the received key to the file: API_KEY: (your key here)_
+*  _Sign up with and receive an API Key from https://developer.mapquest.com/_
+* _Create a .env file in the root directory, and add the Better Doctor key to the file: API_KEY: (your key here) and the MapQuest key as: OTHER_API_KEY: (your key here)._
 * _Run "npm install" in your terminal in the root directory_
 * _Open /dist/index.html in your preferred internet browser._
 
