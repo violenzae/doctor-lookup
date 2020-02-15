@@ -21,9 +21,9 @@ _This is an HTML page that contains a jQuery powered form that returns Portland 
 ## Specifications
 | Behavior      | Input         | Output|
 | ------------- |:-------------:| -----:|
-| Outputs doctors treat inputted symptom   | rash             | <list of doctors associated w or treat rashes> |
-| Output doctors that match inputted name   | marcus             | <list of doctors with marcus in their name> |
-| Output doctors that match 25 mile radius of inputted address   | 123 candy lane, candy town, OR 23445           | <list of doctors within 25 miles of this address> |
+| Outputs doctors treat inputted symptom   | rash             | list of doctors associated w or treat rashes |
+| Output doctors that match inputted name   | marcus             | list of doctors with marcus in their name |
+| Output doctors that match 25 mile radius of inputted address   | 123 candy lane, candy town, OR 23445           | list of doctors within 25 miles of this address |
 | Output shows message when no doctors match criteria   | fsadfd             | "There are no results for this search."|
 | Output shows error message when API call fails   | <API Fail>             | "Something went wrong with this request." |
 
