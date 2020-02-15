@@ -26,7 +26,6 @@ $(document).ready(function() {
         symptom
       );
       getElements(response);
-      console.log(response);
     })();
 
     function getElements(response) {
@@ -71,7 +70,7 @@ $(document).ready(function() {
         }
       } else {
         document.getElementById("doctors").innerHTML =
-          "Something went wrong with this request (better doctor).";
+          "Something went wrong with this request.";
       }
     }
   });
