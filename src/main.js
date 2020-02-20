@@ -15,6 +15,9 @@ $(document).ready(function() {
     (async () => {
       let newGeo = new GeoService();
       const geoResponse = await newGeo.getLatLang(address);
+
+      checkErrorGeo(geoResponse);
+
       const latitude = geoResponse.results[0].locations[0].latLng.lat;
       const longitude = geoResponse.results[0].locations[0].latLng.lng;
 
@@ -28,8 +31,16 @@ $(document).ready(function() {
       getElements(response);
     })();
 
+    function checkErrorGeo(geoResponse) {
+      if(geoResponse === false) {
+        $("#doctors").show();
+        document.getElementById("doctors").innerHTML =
+        "Something went wrong with this address request.";
+      }
+    }
+
     function getElements(response) {
-      $("#doctors").empty("p");
+      $("#doctors").empty();
       $("#doctors").show();
       if (response) {
         if (response.data.length == 0) {
@@ -56,6 +67,9 @@ $(document).ready(function() {
               } else {
                 $("#doctors").append(
                   "<br>Accepting new patients?: <strong>No</strong><br>");
+              }
+              if (response.data[i].practices[j].website) {
+                $("#doctors").append(`Website: <a href="${response.data[i].practices[j].website}">Link</a><br>`);
               }
 
               for (let k = 0; k < response.data[i].practices[j].phones.length; k++) {

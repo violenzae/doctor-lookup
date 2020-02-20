@@ -2,7 +2,7 @@
 
 #### _A page that returns local doctors that can treat specific symptoms_
 
-#### By _**Rachel Schieferstein
+#### By Rachel Schieferstein
 
 ## Description
 
@@ -14,9 +14,10 @@ _This is an HTML page that contains a jQuery powered form that returns Portland 
 * _Clone or download from Github Repository._
 *  _Sign up with and receive an API Key from http://betterdoctor.com_
 *  _Sign up with and receive an API Key from https://developer.mapquest.com/_
-* _Create a .env file in the root directory, and add the Better Doctor key to the file: API_KEY: (your key here) and the MapQuest key as: OTHER_API_KEY: (your key here)._
-* _Run "npm install" in your terminal in the root directory_
-* _Open /dist/index.html in your preferred internet browser._
+* _Create a .env file in the root directory, and add the Better Doctor key to the file: API_KEY=your-key-here and the MapQuest key as: OTHER_API_KEY=your-key-here._
+* _Run "npm install" in your terminal in the root directory._
+* _Run "npm run start" in your terminal in the root directory._
+
 
 ## Specifications
 | Behavior      | Input         | Output|
@@ -38,7 +39,7 @@ _If there are any questions, please contact me at violenza@gmail.com._
 
 ## Technologies Used
 
-_This page was created using HTML, jQuery, CSS and Bootstrap CSS._
+_This page was created using HTML, jQuery, CSS and Bootstrap CSS, node JS, webpack, Mapquest Geocoder API and Better Doctor API._
 
 ### License
 
