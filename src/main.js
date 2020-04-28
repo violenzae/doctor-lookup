@@ -29,7 +29,7 @@ $(document).ready(function() {
     })();
 
     function getElements(response) {
-      $("#doctors").empty("p");
+      $("#doctors").empty();
       $("#doctors").show();
       if (response) {
         if (response.data.length == 0) {
